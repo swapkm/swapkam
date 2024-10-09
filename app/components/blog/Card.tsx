@@ -27,7 +27,7 @@ const Card: React.FC<BlogCardProps> = ({ post }) => {
             />
           </div>
         )}
-        <div className="p-2">
+        <div className="px-4">
           <h3 className="text-lg font-semibold text-black">{post.title}</h3>
           <div className="my-2">
             {post.tags.map((tag) => (
