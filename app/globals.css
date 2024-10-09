@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold mb-4 text-gray-900;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold mb-3 text-gray-800;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold mb-2 text-gray-700;
+  }
+
+  h4 {
+    @apply text-xl font-medium mb-2 text-gray-600;
+  }
+
+  h5 {
+    @apply text-lg font-medium mb-1 text-gray-500;
+  }
+
+  h6 {
+    @apply text-base font-medium mb-1 text-gray-400;
+  }
+
+  p {
+    @apply text-base mb-4 text-gray-600 leading-relaxed;
+  }
+
+  ul {
+    @apply list-disc pl-5 mb-4 text-gray-600;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  ol {
+    @apply list-decimal pl-5 mb-4 text-gray-600;
+  }
+
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic mb-4 text-gray-600;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 14px;
+}
