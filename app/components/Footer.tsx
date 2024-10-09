@@ -16,25 +16,25 @@ const Footer = () => {
     {
       href: "https://facebook.com/swapkam",
       icon: (
-        <FaFacebook className="text-gray-700 hover:text-blue-500 text-3xl" />
+        <FaFacebook className="text-gray-900 hover:text-yellow-500 text-3xl" />
       ),
     },
     {
       href: "https://youtube.com/@SwapKam",
       icon: (
-        <FaYoutube className="text-gray-700 hover:text-blue-500 text-3xl" />
+        <FaYoutube className="text-gray-900 hover:text-yellow-500 text-3xl" />
       ),
     },
     {
       href: "https://instagram.com/swapkams",
       icon: (
-        <FaInstagram className="text-gray-700 hover:text-blue-500 text-3xl" />
+        <FaInstagram className="text-gray-900 hover:text-yellow-500 text-3xl" />
       ),
     },
     {
       href: "https://twitter.com/swapkams",
       icon: (
-        <FaTwitter className="text-gray-700 hover:text-blue-500 text-3xl" />
+        <FaTwitter className="text-gray-900 hover:text-yellow-500 text-3xl" />
       ),
     },
   ];
@@ -43,10 +43,10 @@ const Footer = () => {
     <footer className="bottom-0 z-10 px-4 py-10 items-center">
       <div className="container mx-auto text-center">
         {/* Map through navLinks to generate navigation links */}
-        <ul className="list-none pl-0 sm:flex justify-center space-x-4 whitespace-nowrap">
+        <ul className="list-none pl-0 sm:flex justify-center text-gray-900 space-x-4 whitespace-nowrap">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="hover:text-blue-300">
+              <Link href={link.href} className="hover:text-yellow-500">
                 {link.label}
               </Link>
             </li>
@@ -69,7 +69,7 @@ const Footer = () => {
 
         <p className="mt-4">
           © {new Date().getFullYear()},{` `}
-          <a href="https://swapkam.com" className="hover:text-blue-300">
+          <a href="https://swapkam.com" className="hover:text-yellow-500">
             SwapKam
           </a>
           , All rights reserved

@@ -59,14 +59,14 @@ export default function Home() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="p-3 rounded-l-md text-white bg-black"
+                  className="p-3 rounded-l-md text-white bg-gray-900"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <button
                   type="submit"
-                  className={`p-3 rounded-r-md font-bold ${
+                  className={`p-3 rounded-r-md font-bold text-gray-900 ${
                     loading
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-yellow-500 hover:bg-yellow-400"
