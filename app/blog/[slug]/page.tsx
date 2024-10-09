@@ -39,9 +39,9 @@ export async function generateMetadata({
       url: `https://swapkam.com/blog/${post.slug}`,
       images: [
         {
-          url: post.featuredImage || "https://swapkam.com/images/default.jpg", // Fallback image if none exists
-          width: 800,
-          height: 600,
+          url: post.featuredImage || "https://swapkam.com/image/default.jpg", // Fallback image if none exists
+          width: 1280,
+          height: 720,
           alt: `Featured image for ${post.title}`,
         },
       ],
@@ -72,11 +72,11 @@ export default async function BlogPostPage({
     <article className="w-full max-w-screen-lg mx-auto px-4 lg:px-0">
       {post.featuredImage && (
         <header
-          className="w-full h-96 bg-cover bg-center rounded-lg mb-4 mx-auto"
+          className="w-full h-auto bg-cover min-h-96 bg-center rounded-lg mb-4 mx-auto"
           style={{ backgroundImage: `url(${post.featuredImage})` }}
         >
           {/* Optional overlay */}
-          <div className="bg-black bg-opacity-60 h-full p-4 rounded-lg">
+          <div className="bg-black bg-opacity-60 h-full min-h-96 p-4 rounded-lg">
             <h1 className="text-white text-4xl mb-2">{post.title}</h1>
             <p className="text-white block mb-2">
               <strong>By {post.author.name}</strong>
@@ -85,12 +85,13 @@ export default async function BlogPostPage({
               {post.tags.map((tag) => (
                 <span
                   key={tag.id}
-                  className="tag inline-block mr-2 mb-2 text-sm bg-gray-200 rounded-full px-2 py-1"
+                  className="tag inline-block mr-2 mb-4 text-sm bg-white rounded-xl px-2 py-1"
                 >
                   {tag.name}
                 </span>
               ))}
             </div>
+
             <time className="block my-2">
               <p className="text-white">
                 Last updated:{new Date(post.updatedAt).toLocaleDateString()}{" "}

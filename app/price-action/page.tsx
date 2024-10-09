@@ -29,7 +29,7 @@ export default function PriceAction() {
     <main className="w-full h-screen flex items-center justify-center">
       <div className="h-96 max-w-screen-2xl mx-auto px-4 flex items-center justify-center">
         <h1
-          className="text-8xl font-bold transition-colors duration-500 ease-in-out"
+          className="text-2xl md:text-8xl font-bold transition-colors duration-500 ease-in-out"
           style={{ color: colors[colorIndex] }}
         >
           Comming Soon!

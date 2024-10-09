@@ -28,12 +28,12 @@ const Card: React.FC<BlogCardProps> = ({ post }) => {
           </div>
         )}
         <div className="p-2">
-          <h3 className="text-lg font-semibold text-gray-800">{post.title}</h3>
+          <h3 className="text-lg font-semibold text-black">{post.title}</h3>
           <div className="my-2">
             {post.tags.map((tag) => (
               <span
                 key={tag.id}
-                className="inline-block bg-blue-500 text-white text-xs font-bold uppercase rounded-full px-3 py-1 mr-2"
+                className="inline-block bg-yellow-500 text-white text-xs font-bold uppercase rounded-full px-3 py-1 mr-2 mt-2"
               >
                 {tag.name}
               </span>
@@ -41,15 +41,15 @@ const Card: React.FC<BlogCardProps> = ({ post }) => {
           </div>
           <p className="text-sm text-gray-600 mt-2">
             {post.description
-              ? post.description.slice(0, 100)
+              ? post.description.slice(0, 160)
               : "No description available."}
             ...
           </p>
           <div className="mt-4 flex items-center justify-between">
-            <p className="text-sm font-medium text-gray-700">
-              By {post.author.name}
+            <p className="text-sm font-medium text-black">
+              By <b>{post.author.name}</b>
             </p>
-            <p className="text-sm font-medium text-gray-700">
+            <p className="text-sm font-medium text-black">
               {new Date(post.updatedAt).toLocaleDateString()}
             </p>
           </div>

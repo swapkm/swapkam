@@ -40,7 +40,7 @@ body {
   }
 
   h4 {
-    @apply text-xl font-medium mb-2 text-gray-600;
+    @apply text-xl font-medium mb-2 text-gray-700;
   }
 
   h5 {
@@ -52,11 +52,11 @@ body {
   }
 
   p {
-    @apply text-base mb-4 text-gray-600 leading-relaxed;
+    @apply text-base mb-4 text-gray-700 leading-relaxed;
   }
 
   ul {
-    @apply list-disc pl-5 mb-4 text-gray-600;
+    @apply list-disc pl-5 mb-4 text-gray-700;
   }
 
   li {
@@ -64,19 +64,10 @@ body {
   }
 
   ol {
-    @apply list-decimal pl-5 mb-4 text-gray-600;
+    @apply list-decimal pl-5 mb-4 text-gray-700;
   }
 
   blockquote {
-    @apply border-l-4 border-gray-300 pl-4 italic mb-4 text-gray-600;
+    @apply border-l-4 border-gray-300 pl-4 italic mb-4 text-gray-700;
   }
-}
-
-.tag {
-  display: inline-block;
-  margin: 0 5px;
-  padding: 5px 10px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  font-size: 14px;
 }

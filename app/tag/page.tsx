@@ -18,7 +18,7 @@ export default async function TagsPage() {
 
   return (
     <div className="w-full max-w-screen-sm mx-auto pt-20 px-4">
-      <h1 className="text-3xl font-bold mx-4">All Tags:</h1>
+      <h1 className="text-3xl font-bold">All Tags:</h1>
       <div className="list-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {tags.map((tag) => (
           <div key={tag.id}>

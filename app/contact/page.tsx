@@ -47,7 +47,7 @@ const Contact = () => {
           <div className="flex items-center">
             <FaMapMarkerAlt className="text-2xl mr-4 text-red-500" />
             <span className="text-lg font-medium">
-              123 SwapKam Street, Stock City, Financial Freedom 101
+              03 Shop, Near Goverment Hospital, Hinganghat, WR, MH 442301
             </span>
           </div>
         </div>

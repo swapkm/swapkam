@@ -6,9 +6,11 @@ export default function Home() {
   const [email, setEmail] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     const res = await fetch("/api/subscribe", {
       method: "POST",
@@ -18,8 +20,10 @@ export default function Home() {
       body: JSON.stringify({ email }),
     });
 
+    setLoading(false);
+
     if (res.ok) {
-      setSubmitted(true); // Show thank you message
+      setSubmitted(true);
     } else {
       const errorMessage = await res.json();
       setError(errorMessage.error || "Failed to subscribe. Please try again.");
@@ -33,7 +37,7 @@ export default function Home() {
         <div>
           <h1 className="text-4xl font-bold mb-4">Master the Stock Market</h1>
           <p className="text-lg mb-8">
-            Join our community of savvy investors and get real-time insights on
+            Join our community of savvy traders and get real-time insights on
             stock trends, tips, and strategies.
           </p>
 
@@ -62,9 +66,14 @@ export default function Home() {
                 />
                 <button
                   type="submit"
-                  className="p-3 rounded-r-md font-bold bg-yellow-500 hover:bg-yellow-400 transition duration-200"
+                  className={`p-3 rounded-r-md font-bold ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-yellow-500 hover:bg-yellow-400"
+                  } transition duration-200`}
+                  disabled={loading}
                 >
-                  Get Started
+                  {loading ? "Loading..." : "Get Started"}
                 </button>
               </form>
               {error && <p className="text-red-500 mt-4">{error}</p>}
