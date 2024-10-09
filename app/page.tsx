@@ -42,7 +42,9 @@ export default function Home() {
               <h2 className="text-2xl font-bold mb-4">
                 Thank you for subscribing!
               </h2>
-              <p className="text-lg">You’ll start receiving updates soon.</p>
+              <p className="text-lg">
+                You&apos;ll start receiving updates soon.
+              </p>
             </div>
           ) : (
             <>
