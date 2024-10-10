@@ -36,15 +36,15 @@ body {
   }
 
   h3 {
-    @apply text-2xl font-semibold mb-2 text-gray-700;
+    @apply text-xl font-semibold mb-2 text-gray-700;
   }
 
   h4 {
-    @apply text-xl font-medium mb-2 text-gray-600;
+    @apply text-lg font-medium mb-2 text-gray-600;
   }
 
   h5 {
-    @apply text-lg font-medium mb-1 text-gray-600;
+    @apply text-base font-medium mb-1 text-gray-600;
   }
 
   h6 {
