@@ -32,7 +32,7 @@ const Header = () => {
   const links = [
     { href: "/blog", label: "Blog" },
     { href: "/tag", label: "Tags" },
-    { href: "/price-action", label: "Price Action" },
+    { href: "/map", label: "Map" },
   ];
 
   return (
