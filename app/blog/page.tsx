@@ -30,6 +30,7 @@ export default async function BlogPage() {
       {posts.map((post) => (
         <Card key={post.id} post={post} />
       ))}
+      <div className="m-auto h-16 bg-gradient-to-tr from-[#E114E5] via-yellow-500 to-[#C084FC] blur-[118px]" />
     </div>
   );
 }

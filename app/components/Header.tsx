@@ -32,7 +32,6 @@ const Header = () => {
   const links = [
     { href: "/blog", label: "Blog" },
     { href: "/tag", label: "Tags" },
-    { href: "/finance", label: "Finance" },
     { href: "/price-action", label: "Price Action" },
   ];
 
@@ -42,7 +41,9 @@ const Header = () => {
         <div className="max-w-5xl mx-auto px-4 lg:px-0">
           <div className="flex items-center justify-between h-16">
             <Link href="/" title="SwapKam">
-              <text className="text-2xl md:text-4xl font-bold">SWAPKAM</text>
+              <text className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-500 bg-clip-text text-transparent">
+                SWAPKAM
+              </text>
             </Link>
 
             <ul className="hidden list-none pl-0 md:flex space-x-4 items-center">
